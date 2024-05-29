@@ -1,120 +1,195 @@
 @charset "ISO-8859-1";
-@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
-:root {
-  --remReset: 62.5%;
-}
-html {
-  font-size: var(--remReset);
-}
-body {
-  font-family: "Bricolage Grotesque", sans-serif;
-  font-style: normal;
-  font-size: 1.4rem;
-  background-color: #00a47b;
-  background-image:none;
-  transition-property: margin;
-  transition-duration: 1s;
-  transition-timing-function: linear;
-  transition: background-image 2s smooth;
-}
-.login-container {
-  background-color: #fff;
-  width: 100%;
-  height: 100vh;
-  transition-property: border-radius, height;
-  transition-duration: 1s;
-  transition-timing-function: linear;
-}
-.login-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 42px 20px;
-  max-width: 310px;
-  margin: 0 auto;
-  text-align: center;
-}
-.login-content p {
-  font-size: 1.1rem;
-  margin-top: 5rem;
-}
-.login-content p strong {
-  color: #87a922;
-}
-.login-content_header {
-  text-align: center;
-}
-.login-content_header span#logo {
-  font-size: 1.8rem;
-  font-weight: 800;
-}
-.login-content_header h2 {
-  font-size: 3.5rem;
-  line-height: 1;
-  margin: 25px 0;
-}
-form {
-  display: flex;
-  flex-direction: column;
-}
-.login-form input {
-  padding: 8px 75px;
-  border-radius: 50px;
-}
-input {
-  border: 1px solid #ccc;
-  margin: 8px 0;
-}
-input[type="submit"] {
-  border: none;
-  background-color: #87a922;
-  color: #fffacd;
-  font-weight: 800;
-  letter-spacing: 1.3px;
-}
-.login-netoworks {
-  margin-top: 2rem;
-}
-.login-icons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin: 20px;
-}
-ul.login-icons li {
-  background-color: #cadd91;
-  padding: 8px 10px;
-  border-radius: 8px;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Poppins', sans-serif;
+  transition:all .3s;
+  user-select:none;
+  text-decoration:none;
 }
 
-#icon_n{
-  background-color: #cadd91;
-  padding: 14px 16px;
-  border-radius: 8px;
-  color: rgb(135, 169, 34)
+
+body{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  overflow:hidden; background:url('https://assets.nflxext.com/ffe/siteui/vlv3/76c10fc9-7ccd-4fbf-bc59-f16a468921ca/4fb4af6e-d0ca-4c7f-b004-b34226727e55/IN-en-20230529-popsignuptwoweeks-perspective_alpha_website_large.jpg');
+  background-size:cover;
+  position:relative;
 }
-@media screen and (min-width: 400px) {
-  body {
-    margin: 20px;
-  }
-  .login-container {
-    border-radius: 1.6rem;
-  }
+
+
+body:after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:-1;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,.60);
+  box-shadow:inset 0 0 20px #000,
+             inset 0 0 80px #000;
 }
-@media screen and (min-width: 700px) {
-  body {
-    background-color: #00a47b;
-    background-image: url("https://images.pexels.com/photos/338936/pexels-photo-338936.jpeg");
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-position:center;
-    height:100vh;
-  }
-  .login-container {
-    position: absolute;
-    right: 20px;
-    max-width: 550px;
-    height: 90%;
-    top:20px;
-  }
+
+
+.logo{
+  width:120px;
+  position:absolute;
+  top:10px;
+  left:10px;
+  filter:drop-shadow(0 0 25px #000);
+}
+
+
+form{
+  width:350px;
+  background:rgba(0,0,0,.70);
+  padding:80px 40px;
+  color:#fff;
+}
+
+
+form h3{
+  color:#fff;
+  text-transform:capitalize;
+  font-size:1.8em;
+}
+
+
+form .inputbox{
+  margin:25px 0;
+  position:relative;
+}
+
+
+form .inputbox .msg{
+  font-size:.70em;
+  margin-top:5px;
+  color:#f00;
+}
+
+
+form .inputbox label{
+  position:absolute;
+  top:-10px;
+  right:8px;
+  padding:5px 15px;
+  width:auto;
+  font-size:.75em;
+  user-select:none;
+  color:#eee;
+  background:#CC0202;
+  border-radius:20px;
+}
+
+
+form .inputbox input{
+  border:none;
+  outline:none;
+  padding:15px 15px;
+  width:100%;
+  font-size:1em;
+  user-select:none;
+  outline:2px solid #CC0202;
+  border-radius:5px;
+  background:#111;
+  color:#fff;
+}
+
+
+form .inputbox input:focus{
+  background:#222;
+}
+
+
+
+.sub_btn{
+  width:100%;
+  border:none;
+  outline:none;
+  padding:15px 0;
+  font-size:1em;
+  text-transform:capitalize;
+  color:#eee;
+  background:#CC0202;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+
+form .sub_btn:hover{
+  background:#222;
+  box-shadow:0 0 20px #000;
+}
+
+
+
+form .helpBox{
+  display:flex;
+  justify-content:space-between;
+  margin-top:25px;
+  color:#777;
+  font-size:.95em;
+}
+
+
+form .helpBox a{
+  color:#777;
+}
+
+
+form .helpBox a:hover{
+  text-decoration:underline;
+}
+
+
+form .sign{
+  margin:20px 0;
+  font-size:1.2em;
+  color:#666;
+}
+
+
+form .sign a{
+  color:#fff;
+}
+
+form .sign a:hover{
+  text-decoration:underline;
+}
+
+
+form .msg{
+  font-size:.75em;
+  color:#555;
+}
+
+
+
+
+.fa-youtube-play{
+  position:absolute;
+  right:20px;
+  bottom:20px;
+  color:rgba(255,0,0,.75);
+  cursor:pointer;
+  
+}
+
+.fa-youtube-play a{
+  text-decoration:none;
+  font-size:.85em;
+  color:rgba(255,255,255,.75);
+}
+
+.fa-youtube-play a:hover{
+  color:rgba(255,0,0,.75);
+}
+
+
+#rem{
+  accent-color:#CC0202;
+}

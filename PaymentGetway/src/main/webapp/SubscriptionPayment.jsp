@@ -9,37 +9,31 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>JSP Page</title>
-<link rel="stylesheet" href = "css/SubscriptionPayment.css"/>
+<link rel="stylesheet" href="css/SubscriptionPayment.css" />
 
 </head>
 <body>
 	<h:form>
- <div class="credit-card-form">
-    <h2>PAYMENT PORTAL</h2>
-<img class="Image1" src="https://i.ibb.co/hgJ7z3J/6375aad33dbabc9c424b5713-card-mockup-01.png" alt="6375aad33dbabc9c424b5713-card-mockup-01" border="0"></a>
-  
-    <form>
-      <div class="form-group">
-        <label for="card-number">Card Number</label>
-        <input type="text" id="card-number" placeholder="Card number">
-      </div>
-      <div class="form-group">
-        <label for="card-holder">Card Holder</label>
-        <input type="text" id="card-holder" placeholder="Card holder's name">
-      </div>
-      <div class="form-row">
-        <div class="form-group form-column">
-          <label for="expiry-date">Expiry Date</label>
-          <input type="text" id="expiry-date" placeholder="MM/YY">
-        </div>
-        <div class="form-group form-column">
-          <label for="cvv">CVV</label>
-          <input type="text" id="cvv" placeholder="CVV">
-        </div>
-      </div>
-      <button type="submit" class="click-button" onclick="showLoading(event, this)">PAY NOW - $(TOTAL)</button>
-    </form>
-  </div>
+		<div class="credit-card-form">
+			<h2>PAYMENT PORTAL</h2>
+			<img class="Image1"
+				src="https://i.ibb.co/hgJ7z3J/6375aad33dbabc9c424b5713-card-mockup-01.png"
+				alt="6375aad33dbabc9c424b5713-card-mockup-01" border="0"></a>
+
+			<div class="order_details">
+				<li class="flex_between"><span class="span_col">Company</span>
+					<h:outputText value="#{company}" /></li>
+				<li class="flex_between"><span class="span_col">Plan</span> <h:outputText
+						value="#{plan}" /></li>
+				<li class="flex_between"><span class="span_col">GST(%)</span> <h:outputText
+						value="#{gst}" /></li>
+				<li class="flex_between"><span class="span_col">Amount</span> <h:outputText
+						value="#{amount}" /></li>
+			</div>
+			<h:commandButton action="#{bodyImpl.ClaimPlanMonthly()}" value="Choose Plan"></h:commandButton>
+		<!-- 	<button type="submit" class="click-button"
+				onclick="showLoading(event, this)">PAY NOW - $(TOTAL)</button> -->
+		</div>
 	</h:form>
 </body>
 	</html>

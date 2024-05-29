@@ -1,9 +1,24 @@
 package com.java.payment;
 
-public class AvailableBalance {
+public class Plandetails {
 	private int balanceId;
 	private int	 userId;
 	private double balance;
+	private String plan;
+	private String planStartTime;
+	
+	public String getPlan() {
+		return plan;
+	}
+	public void setPlan(String plan) {
+		this.plan = plan;
+	}
+	public String getPlanStartTime() {
+		return planStartTime;
+	}
+	public void setPlanStartTime(String planStartTime) {
+		this.planStartTime = planStartTime;
+	}
 	public int getBalanceId() {
 		return balanceId;
 	}

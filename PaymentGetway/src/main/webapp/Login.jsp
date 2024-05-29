@@ -15,50 +15,49 @@
 </head>
 <body>
 	<h:form>
-	   <%--  Username
-	    <h:inputText value="#{login.userName}" /><br>
-	    Password
-	    <h:inputSecret value="#{login.password}" /><br>
-	    <h:commandButton action="#{LoginImpl.loginUser(login)}" value="Login" /> --%>
-	    <div class="login-container">
-  <div class="login-content">
-    <div class="login-content_header">
-      <span id="logo">
-        <box-icon type='solid' name='landscape' color="#87A922"></box-icon> Land Scape
-      </span>
-      <h2>Create account</h2>
-    </div>
-    <div>
-      <div class="login-form">
-        Username
-        <h:inputText value = "#{login.userName}"/>
-        Password
-        <h:inputSecret value = "#{login.password}"/><br>
-        <h:commandButton action = "#{LoginImpl.loginUser(login)}" value="LOGIN" />
-      </div>
-      <div class="login-netoworks">
-        <span>or sign up with</span>
-        <ul class="login-icons">
-          
-            <box-icon color="#87a922" type='logo' name='google' id="icon_n">
-            <i class="fa fa-google" aria-hidden="true"></i>
-            </box-icon>
-    
-     
-            <box-icon color="#87a922" name='twitter' type='logo' id="icon_n">
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-            </box-icon>
-         
-            <box-icon color="#87a922" type='logo' name='github' id="icon_n">
-            <i class="fa fa-github" aria-hidden="true"></i>
-            </box-icon>
-        </ul>
-      </div>
-      <p>By creating an account you agree to Land Scape's <strong>Terms of Services</strong> and <strong>Privary Policy.</strong></p>
-    </div>
+	  
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" class="logo">
+
+  
+  <h3>Sign In</h3>
+  
+  <div class="inputbox">
+    <label>Email or phone number</label>
+    <h:inputText value = "#{login.userName}"/>
+    <p class="msg"></p>
   </div>
-  <div class="login-footer"></div>
-</div>
+  
+  
+  <div class="inputbox">
+    <label>Password</label>
+    <h:inputSecret value = "#{login.password}"/>
+   <p class="msg"></p>
+  </div>
+
+  
+  
+  <h:commandButton action = "#{LoginImpl.loginUser(login)}" value="LOGIN" styleClass="sub_btn" />
+  
+  <div class="helpBox">
+    <div class="checkBox">
+      <input type="checkbox" id="rem">
+      <label for="rem">Remember me</label>
+    </div>
+    
+    <a href="##">Need help?</a>
+  </div>
+  
+  <p class="sign">
+    New to Netflix?
+    <a href="##">Sign up now</a>.
+  </p>
+  
+  <p class="msg">This page is protected by Google reCAPTCHA to ensure you're not a bot. <a href="##">Learn more.</a></p>
+  
+
+
+<!----youtube link----->
+<i class="fa fa-youtube-play" style="font-size:1.2em;" title="youtube channel..."> <a href="https://www.youtube.com/@MR.shortzed333" target="_blank">Youtube</a></i>
 	</h:form>
 </body>
 	</html>

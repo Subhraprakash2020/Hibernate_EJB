@@ -8,13 +8,13 @@
 	
 	<managed-bean>
 		<managed-bean-name>balance</managed-bean-name>
-		<managed-bean-class>com.java.payment.AvailableBalance</managed-bean-class>
+		<managed-bean-class>com.java.payment.Plandetails</managed-bean-class>
 		<managed-bean-scope>request</managed-bean-scope>
 	</managed-bean>	
 		
 	<managed-bean>
 		<managed-bean-name>bodyImpl</managed-bean-name>
-		<managed-bean-class>com.java.payment.AvlBalanceImpl</managed-bean-class>
+		<managed-bean-class>com.java.payment.PlandetailsImpl</managed-bean-class>
 		<managed-bean-scope>request</managed-bean-scope>
 	</managed-bean>
 	
@@ -27,6 +27,12 @@
 	<managed-bean>
 		<managed-bean-name>LoginImpl</managed-bean-name>
 		<managed-bean-class>com.java.payment.UserAuthImpl</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	
+	<managed-bean>
+		<managed-bean-name>message</managed-bean-name>
+		<managed-bean-class>com.java.payment.Message</managed-bean-class>
 		<managed-bean-scope>request</managed-bean-scope>
 	</managed-bean>
 </faces-config>

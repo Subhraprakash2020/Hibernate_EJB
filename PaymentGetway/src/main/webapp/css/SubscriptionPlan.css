@@ -1,254 +1,194 @@
-@charset "ISO-8859-1";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Open Sans", sans-serif;
 }
+
 body {
-    background-color: #191b1d;
-    width: 100%;
-    font-family: "Roboto", sans-serif;
-    color: #fff;
-}
-section.pricing-section {
-    width: 100%;
-    height: 100vh;
-
-    .pricing {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        .pricing-header {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #bc1e4a;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            row-gap: 12px;
-            padding: 20px 70px;
-            border-radius: 0px 0px 8px 8px;
-            p {
-                font-weight: 300;
-            }
-            h3 {
-                font-weight: 500;
-                display: flex;
-                align-items: center;
-                column-gap: 5px;
-            }
-        }
-        .pricing-body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            row-gap: 25px;
-            position: absolute;
-            top: 55%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            .pricing-body-header {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                row-gap: 15px;
-                h2 {
-                    font-weight: 500;
-                }
-                .pricing-checkbox {
-                    display: flex;
-                    column-gap: 10px;
-                    align-items: center;
-                    span {
-                        font-size: 14px;
-                        color: #b5b6b8;
-                    }
-                    > div {
-                        width: 45px;
-                        background: #bc1e4a;
-                        height: 24px;
-                        border-radius: 15px;
-                        position: relative;
-                        cursor: pointer;
-                        div {
-                            position: absolute;
-                            width: 18px;
-                            height: 18px;
-                            background-color: #fff;
-                            top: 50%;
-                            left: 3px;
-                            transform: translateY(-50%);
-                            border-radius: 50%;
-                        }
-                        &.anually div {
-                            left: unset;
-                            right: 3px;
-                        }
-                    }
-                }
-            }
-            .pricing-body-plans {
-                > div {
-                    display: none;
-                    > div {
-                        display: flex;
-                        column-gap: 17px;
-
-                        .card {
-                            background-color: #22262c;
-                            padding: 25px;
-                            border-radius: 8px;
-                            width: 270px;
-                            position: relative;
-
-                            .card-header {
-                                display: flex;
-                                flex-direction: column;
-                                row-gap: 8px;
-                                justify-content: center;
-                                align-items: center;
-                                .card-title {
-                                    font-weight: 400;
-                                    font-size: 14px;
-                                }
-                                .card-price {
-                                    font-size: 26px;
-                                }
-                                .card-users {
-                                    input {
-                                        width: 100%;
-                                        background: transparent;
-                                        border: 1px solid #35393e;
-                                        padding: 10px;
-                                        color: #b5b6b8;
-                                        text-align: center;
-                                        outline: none;
-                                    }
-                                    span {
-                                        font-size: 12px;
-                                        color: #bc1e4a;
-                                    }
-                                }
-                            }
-                            .card-body {
-                                margin-top: 30px;
-                                ul {
-                                    list-style-type: none;
-                                    margin-left: 20px;
-                                    display: flex;
-                                    flex-direction: column;
-                                    row-gap: 8px;
-                                    li {
-                                        color: #b5b6b8;
-                                        position: relative;
-                                        font-size: 14px;
-
-                                        &::before {
-                                            content: "•";
-                                            color: #bc1e4a;
-                                            font-weight: bold;
-                                            width: 20px;
-                                            margin-left: -18px;
-                                            font-size: 25px;
-                                            position: absolute;
-                                            top: 50%;
-                                            transform: translateY(-50%);
-                                        }
-                                    }
-                                }
-                            }
-                            .card-footer {
-                                margin-top: 35px;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                button {
-                                    border: 1px solid #bc1e4a;
-                                    background: transparent;
-                                    padding: 10px 25px;
-                                    color: #b5b6b8;
-                                    cursor: pointer;
-                                    &:hover {
-                                        background: #bc1e4a;
-                                        color: #fff;
-                                    }
-                                }
-                            }
-
-                            &:nth-of-type(2) .card-footer button {
-                                background: #bc1e4a;
-                                color: #fff;
-                                &:hover {
-                                    background: transparent;
-                                    color: #b5b6b8;
-                                }
-                            }
-                        }
-                    }
-
-                    &.active {
-                        display: block;
-                    }
-                }
-            }
-        }
-    }
+  justify-content:center;
+  align-items:center;
+	  background:url('https://assets.nflxext.com/ffe/siteui/vlv3/76c10fc9-7ccd-4fbf-bc59-f16a468921ca/4fb4af6e-d0ca-4c7f-b004-b34226727e55/IN-en-20230529-popsignuptwoweeks-perspective_alpha_website_large.jpg');
+  background-size:cover;
+  position:relative;
 }
 
-@media screen and (max-width: 900px) {
-    section.pricing-section {
-        width: 100%;
-        height: auto;
-
-        .pricing {
-            .pricing-header {
-                width: 60%;
-                padding: 20px 50px;
-            }
-            .pricing-body {
-                margin-top: 780px;
-                padding-bottom: 50px;
-                .pricing-body-plans {
-                    > div {
-                        > div {
-                            flex-direction: column;
-                            row-gap: 17px;
-                        }
-                    }
-                }
-            }
-        }
-    }
+body:after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:-1;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,.60);
+  box-shadow:inset 0 0 20px #000,
+             inset 0 0 80px #000;
 }
-@media screen and (max-width: 500px) {
-    section.pricing-section {
-        .pricing {
-            .pricing-header {
-                width: 100%;
-                padding: 20px 50px;
-                position: unset;
-                top: unset;
-                left: unset;
-                transform: unset;
-                p {
-                    font-size: 14px;
-                }
-                h3 {
-                    font-size: 18px;
-                }
-            }
-            .pricing-body {
-                margin-top: 50px;
-                position: unset;
-                top: unset;
-                left: unset;
-                transform: unset;
-            }
-        }
-    }
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--secondary-color);
+}
+
+.pricing-plans {
+  gap: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  padding: 64px;
+}
+
+.pricing-card {
+  --col: #e4e4e7;
+  position: relative;
+  min-width: 360px;
+  padding: 32px;
+  padding-bottom: 96px;
+  border-radius: 4px;
+  border: 1px solid #262626;
+  background-color: #26262680;
+  box-shadow: 0 0 32px transparent;
+  text-align: center;
+}
+
+.pricing-card.basic {
+  --col: #0891b2;
+}
+
+.pricing-card.standard {
+  --col: #059669;
+}
+
+.pricing-card.premium {
+  --col: #c026d3;
+}
+
+.pricing-card:hover {
+  border-color: var(--col);
+  background-color: #26262680;
+  box-shadow: 0 0 32px #171717;
+  transform: translateY(-16px) scale(1.02);
+  transition: all 0.5s ease;
+}
+
+.pricing-card basic{
+  background-color: #26262680;
+}
+
+.pricing-card > *:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.pricing-card .heading h4 {
+  padding-bottom: 12px;
+  color: var(--col);
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.pricing-card .heading p {
+  color: #a3a3a3;
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+.pricing-card .price {
+  position: relative;
+  color: var(--col);
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.pricing-card .price sub {
+  position: absolute;
+  bottom: 14px;
+  color: #a3a3a3;
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+.pricing-card .features li {
+  padding-bottom: 16px;
+  color: red;
+  font-size: 16px;
+  font-weight: lighter;
+  text-align: left;
+}
+
+.pricing-card .features li i,
+.pricing-card .features li strong {
+  color: #e4e4e7;
+  font-size: 16px;
+  text-align: left;
+}
+
+.pricing-card .features li strong {
+  padding-left: 24px;
+}
+
+.pricing-card .cta-btn {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid var(--col);
+  background-color: var(--col);
+  color: #e4e4e7;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.pricing-card .cta-btn:active {
+  background-color: transparent;
+  color: var(--col);
+  transition: all 0.3s ease;
+}
+
+.header_menu {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #8B0016;
+}
+
+.search {
+  background-color: transparent;
+  border: 2px solid #b22222;
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: #fff;
+}
+
+.search::placeholder {
+  color: #000000;
+}
+
+.search:focus {
+  outline: none;
+  background-color: #b22222;
+}
+
+.header_menu a{
+	margin-right: 3%;
+	color: black;
+	text-decoration: none;
+	font-size: 24px;
+}
+
+.header_menu a:hover{
+	background-color: black;
+    color: #8b0000;
+    padding: 2px;
+    border-radius: 10px;
 }
